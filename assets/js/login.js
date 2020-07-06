@@ -72,10 +72,10 @@ if (loginOpen) {
         e.preventDefault();
 
 
-        let email = logInFormVal.elements['email'].value;
+        let email = logInFormVal.elements['name'].value;
         let password = logInFormVal.elements['password'].value;
 
-      if (!validation()) {
+      //if (!validation()) {
 
         buttons.classList.add('d-none');
         formSpiner.classList.remove('d-none');
@@ -98,7 +98,7 @@ if (loginOpen) {
             .catch((error) => {
                console.log(error)
             })
-         }
+        // }
 
     });
 

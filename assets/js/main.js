@@ -6,3 +6,4 @@ import '@fortawesome/fontawesome-free/js/brands'
 
 
 import './login.js';
+import './add_ad.js';

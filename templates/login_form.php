@@ -4,7 +4,7 @@
         <div class="input">
             <label for="">
                 Mail*</label>
-            <input class="jsInput" type="text" name="email" autocomplete="off">
+            <input class="jsInput" type="text" name="name" autocomplete="off">
             <div class="border-black"></div>
             <div class="border-grey"></div>
         </div>
