@@ -7,7 +7,8 @@ function mm_scripts() {
 
 }
 
-
+require_once(dirname(__FILE__) . '/assets/php/custom_post_type.php');
+require_once(dirname(__FILE__) . '/assets/php/login_user.php');
 
 
 add_theme_support( 'title-tag' );

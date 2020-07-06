@@ -17,6 +17,9 @@
     "url": "https://github.com/duka88/starter/issues"
   },
   "homepage": "https://github.com/duka88/starter#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
   "devDependencies": {
     "css-loader": "^3.5.3",
     "@fortawesome/fontawesome-free": "^5.13.0",

@@ -1,0 +1,404 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    display: grid;
+    padding: 0 30px;
+    grid-template-columns: 300px repeat(11, 1fr);
+    grid-template-rows: 120px auto;
+    margin: 0;
+
+}
+input {
+    border: none;
+    outline: none;
+}
+.devider {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: $grey;
+    margin: 80px 0 40px;
+}
+
+.read-more {
+    color: $black;
+    font-weight: 700;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 9;
+    width: 100%;
+    height: 100vh;
+    background: #ffffff80;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.main {
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.load-more {
+    @extend .flex-center;
+    width: 100%;
+    max-width: 250px;
+    margin: 60px auto 0;
+    background: $black;
+    font-weight: 700;
+    color: $white;
+    padding: 12px 30px;
+    cursor: pointer;
+    position: relative;
+
+    .loader {
+        position: absolute;
+        left: 10px;
+        top: 6px;
+    }
+}
+
+//margins
+
+
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.p-10 {
+    padding: 10px !important;
+}
+
+.p-20 {
+    padding: 20px !important;
+}
+
+.pt-0 {
+    padding-top: 0;
+}
+
+.pt-10 {
+    padding-top: 10px !important;
+
+}
+
+.pt-20 {
+    padding-top: 20px !important;
+
+}
+
+.pt-30 {
+    padding-top: 30px !important;
+}
+
+.pt-50 {
+    padding-top: 50px;
+}
+
+.pt-60 {
+    padding-top: 60px;
+}
+
+.pt-80 {
+    padding-top: 80px;
+}
+
+.pr-20 {
+    padding-right: 20px;
+}
+
+.pb-10 {
+    padding-bottom: 10px !important;
+}
+
+.pb-20 {
+    padding-bottom: 20px !important;
+}
+
+.pb-40 {
+    padding-bottom: 40px !important;
+}
+
+.pb-50 {
+    padding-bottom: 50px;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+.pl-20 {
+    padding-left: 20px;
+}
+
+.pl-40 {
+    padding-left: 40px;
+}
+
+.py-7 {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.py-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.py-15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.py-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.py-40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.py-50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.px-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.px-20 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.px-30 {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+//margins
+.m-0 {
+    margin: 0px !important;
+}
+
+.m-10 {
+    margin: 10px !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mb-0 {
+    margin-bottom: 0px !important;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+
+.mb-40 {
+    margin-bottom: 40px !important;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.mb-60 {
+    margin-bottom: 60px !important;
+}
+
+.ml-0 {
+    margin-left: 0;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.mr-05 {
+    margin-right: 5px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.my-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.my-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.my-30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.my-50 {
+    margin: 50px 0px;
+}
+
+.my-60 {
+    margin: 60px 0;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.mx-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.mx-30 {
+    margin: 0 30px;
+}
+
+//text
+.text-center {
+    text-align: center;
+}
+
+.bold-600 {
+    font-weight: 600;
+}
+
+.text-red {
+    color: $main_color;
+}
+
+.text-grey {
+    color: $grey;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+//flex
+
+.flex-center {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-start {
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+//containers
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+
+.container-full {
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+//grid
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+
+.position-rel {
+    position: relative;
+}
+
+/////buttons
+
+
+
+//////SIZES
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 46%;
+}

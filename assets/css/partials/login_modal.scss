@@ -1,0 +1,131 @@
+.login_wrap {
+    @extend .flex-center;
+    max-width: 600px;
+    padding: 30px;
+    position: fixed;
+    width: 90%;
+    transform: translate(-50%, -2000px);
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: 0.4s;
+    z-index: 99999;
+    background: $white;
+
+    &.open {
+        transform: translate(-50%, -50%);
+    }
+
+
+    .input {
+        position: relative;
+        @extend .flex-start;
+        align-items: flex-end;
+        height: 55px;
+
+        &.textarea {
+            height: 150px;
+            margin-bottom: 5px;
+            padding-top: 23px;
+
+            label {
+                top: 30px;
+                bottom: unset;
+
+                &.focus {
+                    top: 7px;
+                    bottom: unset;
+                    font-size: 12px;
+                }
+            }
+
+            textarea {
+                width: 100%;
+                height: 100%;
+                border: none;
+                outline: none;
+                z-index: 9;
+                background: transparent;
+
+            }
+        }
+
+        label {
+            position: absolute;
+            bottom: 5px;
+            color: $dark_grey;
+            transition: 0.4s;
+
+            &.focus {
+                bottom: 26px;
+                font-size: 12px;
+            }
+            &.error{              
+               color: $red;
+            }
+
+        }
+
+        input {
+            margin-bottom: 5px;
+            z-index: 9;
+            position: relative;
+            background: transparent;
+        }
+
+        .border-grey {
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            display: block;
+            background: $grey;
+        }
+
+        .border-black {
+            position: absolute;
+            height: 2px;
+            width: 0;
+            display: block;
+            background: $black;
+            z-index: 9;
+            transition: 0.4s;
+
+            &.focus {
+                width: 100%;
+            }
+
+            &.error{
+               width: 100%; 
+               background: $red;
+            }
+        }
+
+
+    }
+
+    .btn-wrap {
+        @extend .flex-between;
+
+        .btn {
+            width: 48%;
+            background: $black;
+            font-weight: 700;
+            color: $white;
+            padding: 12px 30px;
+            text-align: center;
+
+        }
+    }
+
+    .spiner-wrap {
+        @extend .flex-center;
+        margin-top: 45px;
+
+        .loader{
+            border-top: 1.1em solid rgba(0, 0, 0, 0.2);
+            border-right: 1.1em solid rgba(0, 0, 0, 0.2);
+            border-bottom: 1.1em solid rgba(0, 0, 0, 0.2);
+            border-left: 1.1em solid #000;
+        }
+    }
+}
