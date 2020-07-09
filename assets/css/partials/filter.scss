@@ -1,0 +1,100 @@
+.filter {
+    margin-top: 40px;
+
+    .devider {
+        width: 80%;
+        margin: 20px 0 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .filter__category-single {
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .filter__category-container {
+        @extend .flex-start;
+        align-items: center;
+
+    }
+
+    .filter__check {
+        display: block;
+        width: 15px;
+        height: 15px;
+        border: 1px solid $grey;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    .filter__category-body {
+        padding: 10px 15px;
+    }
+
+    .filter__icon-wrap {
+        margin-left: 5px;
+
+        &.active {
+            transform: rotate(180deg);
+        }
+    }
+
+    .select {
+        position: relative;
+
+        .mein-option {
+            @extend .flex-between;
+            border: 1px solid $grey;
+            width: 100%;
+            align-items: center;
+            padding: 2px 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .option-wrap {
+            position: absolute;
+            background: $white;
+            border: 1px solid $grey;
+            border-radius: 5px;
+            width: 100%;
+            padding: 5px 0;
+            overflow: hidden;
+        }
+
+        .option {
+            cursor: pointer;
+            padding: 0 5px;
+
+            &:hover {
+                background: $grey;
+            }
+        }
+    }
+
+    @media screen and (max-width: $big-tablet) {
+        .select {
+
+            .mein-option,
+            .option-wrap {
+
+                width: 90%;
+            }
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+
+
+        h3 {
+            font-size: 16px;
+        }
+
+    }
+}

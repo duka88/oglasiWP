@@ -1,4 +1,4 @@
-<div id="loginForm" class="login__login">
+<div id="loginForm" class="login__login form">
     <h3>Uloguj se</h3>
     <form id="logInFormVal" action="/">
         <div class="input">
@@ -15,9 +15,12 @@
             <div class="border-black"></div>
             <div class="border-grey"></div>
         </div>
-        <div id="buttons" class="btn-wrap ">
+        <div id="contactMesLog" class="form__error d-none">
+            <p>Uneti podaci nisu ispravni!</p>
+        </div>
+        <div id="buttons" class="btn-wrap  ">
             <div id="logiInSubmit" type="submit" class="btn">
-               Prosledi
+                Prosledi
             </div>
             <div id="activRegister" class="btn">
                 Registruj Se
@@ -25,9 +28,6 @@
         </div>
         <div id="formSpiner" class="spiner-wrap d-none">
             <div class="loader"></div>
-        </div>
-        <div id="contactMessage" class="message d-none">
-            <p></p>
         </div>
     </form>
 </div>

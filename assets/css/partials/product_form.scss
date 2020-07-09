@@ -1,0 +1,212 @@
+.form_wrap--register {
+    padding: 30px;
+    width: 100%;
+
+
+
+    &.open {
+        transform: translate(-50%, -50%);
+    }
+
+
+    .form__errors {
+        position: absolute;
+        bottom: -16px;
+        font-size: 11px;
+        color: $red;
+    }
+
+    .form__error {
+        border: 1px solid $red;
+        margin-top: 15px;
+        padding: 5px 10px;
+        color: $red;
+    }
+
+    .form {
+        width: 100%;
+        @extend .flex-between;
+        align-items: flex-start;
+        max-width: 900px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .input {
+        width: 47%;
+        position: relative;
+        @extend .flex-start;
+        align-items: flex-end;
+        height: 55px;
+
+        select {
+            border-color: $grey;
+        }
+
+        &.input--textarea {
+            height: 180px;
+            margin-bottom: 5px;
+            padding-top: 23px;
+
+            label {
+                top: 30px;
+                bottom: unset;
+
+                &.focus {
+                    top: 7px;
+                    bottom: unset;
+                    font-size: 12px;
+                }
+            }
+
+            textarea {
+                width: 100%;
+                height: 100%;
+                border: none;
+                outline: none;
+                z-index: 9;
+                background: transparent;
+
+            }
+        }
+
+        label {
+            position: absolute;
+            bottom: 5px;
+            color: $dark_grey;
+            transition: 0.4s;
+
+            &.focus {
+                bottom: 26px;
+                font-size: 12px;
+            }
+
+            &.error {
+                color: $red;
+            }
+
+        }
+
+        input {
+            margin-bottom: 5px;
+            z-index: 9;
+            position: relative;
+            background: transparent;
+        }
+
+        &.input--select {
+            label {
+                position: relative;
+                bottom: unset;
+                margin-right: 10px;
+            }
+        }
+
+        &.input--img {
+            height: 180px;
+            margin-top: 20px;
+
+            label {
+                position: relative;
+                bottom: unset;
+                border: 1px solid $grey;
+                padding: 5px;
+
+            }
+
+            figure {
+                @extend .flex-center;
+                align-items: center;
+                width: 165px;
+                height: 165px;
+                border-radius: 5px;
+                overflow: hidden;
+                cursor: pointer;
+                position: relative;
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        .border-grey {
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            display: block;
+            background: $grey;
+        }
+
+        .border-black {
+            position: absolute;
+            height: 2px;
+            width: 0;
+            display: block;
+            background: $black;
+            z-index: 9;
+            transition: 0.4s;
+
+            &.focus {
+                width: 100%;
+            }
+
+            &.error {
+                width: 100%;
+                background: $red;
+            }
+        }
+
+
+    }
+
+    .btn-wrap {
+        @extend .flex-between;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+        position: relative;
+
+        .btn {
+
+            background: $black;
+            font-weight: 700;
+            color: $white;
+            padding: 12px 30px;
+            text-align: center;
+
+        }
+    }
+
+    .spiner-wrap {
+        @extend .flex-center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .loader {
+            width: 90px;
+            height: 90px;
+            border-top: 2.1em solid rgba(0, 0, 0, 0.2);
+            border-right: 2.1em solid rgba(0, 0, 0, 0.2);
+            border-bottom: 2.1em solid rgba(0, 0, 0, 0.2);
+            border-left: 2.1em solid #000;
+        }
+    }
+
+    @media screen and (max-width: $big-tablet) {
+        .input {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: $small-tablet) {
+        padding-top: 0px;
+
+    }
+}

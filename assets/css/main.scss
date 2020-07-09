@@ -1,8 +1,18 @@
+@import 'https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap';
+
 @import "variables";
-@import "~normalize-scss/sass/normalize/import-now";
+@import "~reset-css/sass/reset";
 
 @import "./global";
 
+@import "./pages/profile_page";
+@import "./pages/single_add";
 
 @import "./partials/login_modal";
 @import "./partials/header";
+@import "./partials/products";
+@import "./partials/login_form";
+@import "./partials/product_form";
+@import "./partials/delete";
+@import "./partials/toster";
+@import "./partials/filter"; 

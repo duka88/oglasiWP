@@ -23,18 +23,23 @@
                 </div>
             </div>
             <?php if(is_user_logged_in()){?>
-                <p class="login click">
-                    <a href="<?php echo wp_logout_url(home_url()); ?>">Izloguj se</a>
-                </p>
-                <?php  }else{ ?>
-                <p id="login" class="login click">
-                    Uloguj Se
-                </p>
+            <p class="login click">
+                <a href="<?php echo wp_logout_url(home_url()); ?>">Izloguj se</a>
+            </p>
+            <?php  }else{ ?>
+            <p id="login" class="login click">
+                Uloguj Se
+            </p>
             <?php   } ?>
         </nav>
     </header>
-    <div class="meny-top menuScroll">
+    <div class="meny-top jsMenuScroll">
         <?php include('templates/main_nav.php') ?>
     </div>
-    <div class="vertical-devider  menuScroll"></div>
+    <div class="vertical-devider  jsMenuScroll">
+    </div>
+    <div id="hamburger" class="hamburger">
+        <div class="bar-1"></div>
+        <div class="bar-2"></div>
+    </div>
     <div class="main">

@@ -1,0 +1,27 @@
+.toster {
+    position: fixed;
+    z-index: 9999;
+    top: 130px;
+    right: 0;
+    max-width: 90%;
+    background: $green;
+    padding: 10px 60px 10px 10px;
+    transition: 0.4s;
+    transform: translateX(400px);
+
+    &.open{
+    	transform: translateX(0);
+    }
+
+    .toster__wrap {
+        @extend .flex-start;
+        color: $white;
+        font-size: 22px;
+
+        p {
+
+            font-weight: 700;
+            margin-left: 10px;
+        }
+    }
+}

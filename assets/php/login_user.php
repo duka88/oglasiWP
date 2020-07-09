@@ -40,6 +40,7 @@
 
 		function register_adFn($data){
 
+			if(!validatorUser($data)){
 		       
 				$email    = $data['email'];
 	            $password = $data['password'];
@@ -51,8 +52,13 @@
 				);
 		
 
-		   if ( !username_exists( $username ) ) {
+		  
 				$user_id = wp_create_user( $username, $password, $email );
+					
+			
+					update_user_meta( $user_id, 'city', $data['city'] );
+					update_user_meta( $user_id, 'phone',$data['phone'] );					
+				
 				$user = new WP_User( $user_id );
 
 				if ( is_wp_error($user) ){
@@ -64,13 +70,44 @@
 		         	return true;
 		        }    
 			
-
-			}
-
-		   
-		 
-
-		   
-			
+          }else{
+             return  validatorUser($data);
+          }
+		
 
 	}
+	 function validatorUser($data){
+      
+    	$errors = array();
+        
+        if(!$data['name']){
+        	$errors['name'] = 'Ime je obavezno!';
+
+        }
+        if(!$data['email']){
+        	$errors['email'] = 'Mejl je obavezan!';        
+        }else{
+           if(!filter_var($data['email'], FILTER_VALIDATE_EMAIL)){
+              $errors['email'] = 'Mejl nije validan!';
+        	}else if(username_exists($data['email']) ) {
+                  $errors['email'] = 'Mejl je zauzauzet!';
+        	  }
+        }
+        if(!$data['password']){
+        	$errors['password'] = 'Sifra je obavezna!';
+        }         
+        if(!$data['city']){
+        	$errors['city'] = 'Mesto je obavezno!';
+        } 
+
+        if(empty($errors)){
+
+        	$errors = array();
+
+        }else{
+            $errors['error'] = true;  
+        }
+
+        return $errors;
+            
+   }

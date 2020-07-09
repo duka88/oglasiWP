@@ -1,6 +1,8 @@
-<?php get_header(); ?>
+<?php
+$id = (int) $_GET['adSeller'] ;
+ get_header(); ?>
 <div class="front-wrap">
-    <h1>Oglasi</h1>
+    <h1>Svi proizvodi: <?php echo get_the_author_meta('display_name',$id ); ?></h1>
     <div class="product__list-wrap">
         <div id="productList" class="product__list">
             <?php
@@ -8,7 +10,8 @@
                 $ads = new WP_Query( array(
                'post_type' => 'ads',              
                'posts_per_page' => 12,
-               'orderby'  => array( 'title' => 'ASC' ), 
+               'author' => $id,
+               'orderby'  => array( 'meta_value_num' => 'ASC', 'title' => 'ASC' ), 
                 'meta_key'  => 'price',
                 'order'   => 'ASC' 
                     ) ); 

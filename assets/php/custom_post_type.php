@@ -49,7 +49,7 @@ function ad_init() {
 		'hierarchical'       => false,
         'menu_position'      => null,
         'menu_icon' =>   'dashicons-images-alt2',
-        'supports'           => array( 'title'),
+        'supports'           => array( 'title', 'thumbnail', 'author'),
         'taxonomies'          => array( 'add-category' )
         
 	);

@@ -6,12 +6,9 @@ function mm_scripts() {
   wp_enqueue_style('mm_main_css',  get_template_directory_uri() .'/assets/main.css'); 
 
 }
+
 add_action( 'admin_init', 'redirect_non_admin_users');
-  /**
-  * Redirect non-admin users to home page
-  *
-  * This function is attached to the ‘admin_init’ action hook.
-  */
+
   function redirect_non_admin_users() {
   if ( !current_user_can( 'manage_options' ) && ('/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF']) ) {
       wp_redirect( home_url() );
@@ -27,9 +24,15 @@ function remove_admin_bar() {
     show_admin_bar(false);
   }
 }
+
+
 require_once(dirname(__FILE__) . '/assets/php/custom_post_type.php');
 require_once(dirname(__FILE__) . '/assets/php/login_user.php');
-require_once(dirname(__FILE__) . '/assets/php/ad_crud.php');
+require_once(dirname(__FILE__) . '/assets/php/add_ad.php');
+require_once(dirname(__FILE__) . '/assets/php/delete_ad.php');
+require_once(dirname(__FILE__) . '/assets/php/edit_ad.php');
+require_once(dirname(__FILE__) . '/assets/php/filters.php');
+require_once(dirname(__FILE__) . '/assets/php/search.php');
 
 
 add_theme_support( 'title-tag' );
@@ -41,14 +44,9 @@ function mm_image_size() {
 
   add_image_size('mm_full', 1200, 900, true);
   add_image_size('mm_prod_med', 500, 500, true);
-  add_image_size('mm_prod_sm', 250, 250, true);
-  /*add_image_size('mm_blog_medium', 275, 150, true);
- 
-  add_image_size('mm_xsm', 78, 70, true);
-  add_image_size('mm_single_pr', 406, 550, true);*/
+  add_image_size('mm_prod_sm', 300, 300, true);
+
 }
 
 add_action('after_setup_theme', 'mm_image_size');
-
-
 
